@@ -1,6 +1,104 @@
 @import "compass/reset";
 @import "compass/css3";
 
+$background-color: #0087cc;
+$text-color: #eaeaed;
+
 body {
-	font-size: 62.5%;
+    font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+    /*margin: 12px 0;*/
+}
+
+.container {
+    margin: 2em;
+}
+
+.card-container {
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all .5s ease-in-out;
+    &:hover {
+        transform: rotateY(180deg);
+    }
+    .side {
+        backface-visibility: hidden;
+        border-radius: 6px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+    }
+    .back {
+        background: #eaeaed;
+        color: #0087cc;
+        line-height: 150px;
+        text-align: center;
+        transform: rotateY(180deg);
+    }
+}
+
+button {
+	margin: 0 auto;
+	display: block;
+    border: 0;
+    background: orange;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 orangered;
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    outline: 0;
+    padding: 12px 20px;
+    transition: all .1s linear;
+}
+
+button:active {
+    box-shadow: 0 2px 0 orangered;
+    transform: translateY(3px);
+}
+
+@keyframes my {
+	0% {
+		border: 10px solid #000000;
+	}
+
+	20% {
+		border: 8px solid #222222;
+	}
+
+	40% {
+		border: 6px solid #444444;
+	}
+
+	60% {
+		border: 4px solid #666666;
+	}
+
+	80% {
+		border: 2px solid #888888;
+	}
+
+	100% {
+		border: 0;
+	}
+}
+
+
+#fullpage {
+	text-align: center;
+	
+	h2 {
+		font-size: 6em;
+		@include animation(my 4s 1s 3 linear);
+	}
 }

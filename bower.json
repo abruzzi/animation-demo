@@ -1,0 +1,22 @@
+{
+  "name": "shallwechat",
+  "version": "0.1.0",
+  "homepage": "https://github.com/abruzzi/animation-demo",
+  "authors": [
+    "Qiu Juntao <juntao.qiu@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "scripts/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "~3.2.6",
+    "fullpage.js": "~2.6.3",
+    "wow.js": "~1.1.2"
+  }
+}

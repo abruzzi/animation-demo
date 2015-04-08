@@ -9,11 +9,6 @@ $(document).ready(function() {
     	afterLoad: function(anchorLink, index){
     		var loadedSection = $(this);
 			loadedSection.find('.page').addClass(animationName);
-			.one(animationEnd, function() {
-				$(this).removeClass(animationName);
-			});
     	}
     });
-
-    new WOW().init();
 });
